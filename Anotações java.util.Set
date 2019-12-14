@@ -1,0 +1,14 @@
+HashSet -
+- Quando utilizar = Quando não é necessário manter uma ordenação
+- Odernação = Não é ordenado e não permite valores repeditos
+- Perfomance = Por não ter repetição de valores e não ser ordenado é a implementação mais performática.
+
+LinkedHashSet
+- Quando utilizar = Quando é necessário manter a ordem de inserção dos elementos
+- Odernação = Mantem a ordem de inserção dos elementos
+- Perfomance = É a implementação mais lenta por ser necessária manter a ordem
+
+TreeSet
+- Quando utilizar = Quando é necessário alterar a ordem através do uso de comparators
+- Odernação = Mantem ordem e pode ser reordenado
+- Perfomance = É performático para leitura. Para modificalçao tem a necessidade de reordenar, sendo mais lento que o LinkedHasSet
