@@ -1,0 +1,103 @@
+    
+
+//COLLETCTIONS QUEUE
+
+package one.digitalinnovation.queue;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class newMain {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    ///////////CONCEITO DE FILAS////////////////////////
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+    Queue<String> Fila = new LinkedList<>();
+    
+    Fila.add("Juliana");
+    Fila.add("Pedro");
+    Fila.add("Calors");
+    Fila.add("Larissa");
+    Fila.add("João");
+    
+    for (String exibir: Fila){
+        
+        System.out.println(exibir);
+    
+    }
+        System.out.println("    ");
+        System.out.println("Primeiro da fila");
+        String primeiroFila = Fila.peek();
+        System.out.println(primeiroFila);
+        System.out.println("    ");
+        System.out.println("Primeiro da fila removendo ele");
+        String primeiroFilaR = Fila.poll();
+        System.out.println(primeiroFilaR);
+        System.out.println("    ");
+        System.out.println("Fila sem o primeiro = " + Fila);
+        System.out.println("    ");
+        System.out.println("Inserindo Daniel");
+        Fila.add("Daniel");
+        System.out.println(Fila); //verificando posição de Daniel (errado acho)
+        System.out.println("    ");
+        System.out.println("Tamanho da fila: " + Fila.size());
+        System.out.println("    ");
+        System.out.println("Verificando se a fila está vazia = " + Fila.isEmpty());
+    /*
+         Queue<String> filaBanco = new LinkedList<>(); 
+       
+       filaBanco.add("Pamela");
+       filaBanco.add("Patricia");
+       filaBanco.add("Roberto");
+       filaBanco.add("Flávio");
+       filaBanco.add("Anderson");
+       
+       System.out.println(filaBanco);
+       
+       String clienteASerAtendido = filaBanco.poll(); //pegar primeiro item adicionado ou primeiro cliente da fila - porém poll remove o item da fila
+       
+        System.out.println(clienteASerAtendido); //exibindo o primeira da fila pego
+        
+       System.out.println(filaBanco); //exibindo a fila sem o primeiro item pois o poll removeu
+       
+       String primeiroCliente = filaBanco.peek(); //mesma função do poll mas não remove o elemento da fila
+       
+       System.out.println(primeiroCliente);
+      
+       System.out.println(filaBanco);
+       
+     //  filaBanco.clear(); //limpei a fila para exemplo do element
+       
+       String primeiroClienteOuErro = filaBanco.element(); //se a fila nao tiver elementos, lança um erro (o peek exibirá null)
+       
+        System.out.println(primeiroClienteOuErro);     //vai exibir erro pois está vazia a fila
+       
+        System.out.println(filaBanco);
+       
+       ///////navegar pela Fila
+       for (String cliente: filaBanco){
+           System.out.println(cliente);
+       }
+       //////OU//////
+       Iterator<String> iteratorFilaBanco = filaBanco.iterator();
+       
+       while(iteratorFilaBanco.hasNext()){
+    
+           System.out.println("-->"+ iteratorFilaBanco.next());   
+       }
+    
+       //Saber quantos elementos tem na fila
+        System.out.println(filaBanco.size());
+        System.out.println(filaBanco.isEmpty());//se a fila está vazia (como não está exibirá, false) para exibir true, limpe a lista
+        
+        
+    
+        */
+    }
+}
