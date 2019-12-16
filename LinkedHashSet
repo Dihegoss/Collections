@@ -1,0 +1,66 @@
+    
+package one.digitalinnovation.queue;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+
+public class newMain {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+    LinkedHashSet<Integer> sequenciaNumerica = new LinkedHashSet<>();
+    
+    sequenciaNumerica.add(1);
+    sequenciaNumerica.add(2);
+    sequenciaNumerica.add(4);
+    sequenciaNumerica.add(8);
+    sequenciaNumerica.add(16);
+
+    
+        System.out.println(sequenciaNumerica);
+        System.out.println("  ");
+                
+        System.out.println("Remover numero 4");
+        //remover nota do set
+        System.out.println("  ");
+        sequenciaNumerica.remove(4);
+        System.out.println(sequenciaNumerica);
+        System.out.println("  ");
+        
+        System.out.println("Rentornar tamanho do itens Set = ");
+        System.out.println(sequenciaNumerica.size());
+        
+        //Navega em todos os itens do iterator
+       Iterator <Integer> iterator = sequenciaNumerica.iterator();
+        while (iterator.hasNext()){
+            System.out.println("  ");
+            System.out.println("Navegando com while");
+            System.out.println(iterator.next());    
+        }
+        //ou
+        for(Integer nota: sequenciaNumerica){
+            System.out.println("  ");
+            System.out.println("navegando com For");
+            System.out.println(nota);
+        }
+        
+        //Limpando itens
+        sequenciaNumerica.clear();
+        
+        //Retornar se o set está Vazio ou não
+        System.out.println("  ");
+        System.out.println("Set está vazio? = ");
+        System.out.println(sequenciaNumerica.isEmpty());
+        
+        
+    }
+}
