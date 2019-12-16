@@ -1,7 +1,3 @@
-    
-
-//COLLETCTIONS QUEUE
-
 package one.digitalinnovation.queue;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -15,9 +11,7 @@ public class newMain {
     /**
      * @param args the command line arguments
      */
-    
-    ///////////CONCEITO DE FILAS////////////////////////
-    
+        
     public static void main(String[] args) {
         // TODO code application logic here
     Set<Double> notasAlunos = new HashSet<>();
