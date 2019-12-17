@@ -71,8 +71,29 @@ public class JavaApplication3 {
         System.out.println("Tamanho do Mapa");
         System.out.println(campeosMundialFifa.size());
         
+        //Verificar se o mapa contem a chava Estados Unidos
+        System.out.println(" ");
+        System.out.println("Contem Estados Unidos? ");
+        System.out.println(campeosMundialFifa.containsKey("Estados Unidos"));
+        
+        
         System.out.println(" ");
         System.out.println(campeosMundialFifa);
+        
+        System.out.println(" ");
+        //Navegando pelos elementos
+        System.out.println("Mostando elementos com For mostrando os valores");
+        for(Map.Entry<String, Integer>entry: campeosMundialFifa.entrySet()){
+            System.out.println(entry.getKey()+"--"+entry.getValue());    
+         }
+       //ou
+        System.out.println(" ");
+        System.out.println("Navegando com Form sem valores");
+        for (String key:campeosMundialFifa.keySet()){
+           System.out.println(key);
+     
+         }
+        
     }
     
     
