@@ -1,0 +1,111 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication3;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+/**
+ *
+ * @author Diego
+ */
+public class JavaApplication3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       TreeMap<String, String> treeCapitais = new TreeMap<>();
+       
+       //adicionando elementos
+       treeCapitais.put("MG", "Belo Horizonte");
+        treeCapitais.put("RS", "Porto Alegre");
+       treeCapitais.put("SC", "Florianopolis");
+       treeCapitais.put("PR","Curitiba");
+       treeCapitais.put("SP","Sao Paulo");
+       treeCapitais.put("RJ","Rio de Janeiro");
+       
+       //exibindo elementos
+        System.out.println(treeCapitais);
+        
+       //Retorna a primeica capital
+        System.out.println(" ");
+        System.out.println("Primeira Capital");
+        System.out.println(treeCapitais.firstKey());
+        
+        //Retorna a ultma capital do final da arvore
+        System.out.println(" ");
+        System.out.println("Ultima Capital");
+        System.out.println(treeCapitais.lastKey());
+        
+        //Retorna a primeira capital abaixa da arvore parametrizada
+        System.out.println(" ");
+        System.out.println("Exibir capital antes de SC");
+        System.out.println(treeCapitais.lowerKey("SC"));
+        
+        //Retornar primeira capital acima da arvore parametrizada
+        System.out.println(" ");
+        System.out.println("Exibir capital depois de SC: ");
+        System.out.println(treeCapitais.higherKey("SC"));
+        
+        System.out.println(treeCapitais);
+        
+        //exibir primeira capital do topo e seu valor
+        System.out.println(" ");
+        System.out.println("Exibir capital do topo e seu valor");
+        System.out.println(treeCapitais.firstEntry().getKey()+"-"+treeCapitais.firstEntry().getValue());
+        
+        //exibir ultima capital e seu valor
+        System.out.println(" ");
+        System.out.println("Ultima capital e seu valor: ");
+        System.out.println(treeCapitais.lastEntry().getKey()+"-"+treeCapitais.lastEntry().getValue());
+        
+        //retornar primeira capital abaixo da arvore parametrizada
+        System.out.println(" ");
+        System.out.println("Exibir capital Antes de SC com valor");
+        System.out.println(treeCapitais.lowerEntry("SC").getKey()+"-"+treeCapitais.lowerEntry("SC").getValue());
+        
+        System.out.println(" ");
+        System.out.println("Exibir primeira capital depois de SC com valor:");
+        System.out.println(treeCapitais.higherEntry("SC").getKey()+"-"+treeCapitais.higherEntry("SC").getValue());
+        
+        System.out.println(treeCapitais);
+        System.out.println(" ");
+        
+        Map.Entry<String, String> firstEntry= treeCapitais.pollFirstEntry();//retornar primeiro elemento, mas removendo-o
+        Map.Entry<String, String> lastEntry= treeCapitais.pollLastEntry();//retornar ultimo elemento, mas removendo-o
+        
+        System.out.println("Primeira Capital e seu valor removendo-a");
+        System.out.println(firstEntry.getKey()+"-"+firstEntry.getValue());
+        
+        System.out.println(" ");
+        System.out.println("Ultima capital Removendo-a");
+        System.out.println(lastEntry.getKey()+"-"+lastEntry.getValue());
+        
+        System.out.println(" ");
+        System.out.println(treeCapitais);
+        System.out.println(" ");
+        
+        Iterator<String> iterator = treeCapitais.keySet().iterator();
+        System.out.println("Exibindo Capitais e seu valores com Iterator");
+        while(iterator.hasNext()){     
+            String key = iterator.next();
+            System.out.println(key+"-"+treeCapitais.get(key));
+    }
+        System.out.println(" ");
+        System.out.println("Navegando usando Form com valores");
+        for(String capital:treeCapitais.keySet()){
+            System.out.println(capital+"-"+treeCapitais.get(capital));
+            
+        }
+    
+    }
+    
+}
