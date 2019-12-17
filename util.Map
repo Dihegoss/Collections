@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication3;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeSet;
+
+/**
+ *
+ * @author Diego
+ */
+public class JavaApplication3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       Map<String, Integer> campeosMundialFifa = new HashMap<>();
+       
+       //adicionando elementos
+       campeosMundialFifa.put("Brasil", 5);
+       campeosMundialFifa.put("Alemanha", 4);
+       campeosMundialFifa.put("Itália", 4);
+       campeosMundialFifa.put("Uruguai", 2);
+       campeosMundialFifa.put("Argentina", 2);
+       campeosMundialFifa.put("França", 2);
+       campeosMundialFifa.put("Inglaterra", 1);
+       campeosMundialFifa.put("Espanha", 1);
+       
+       //exibindo elementos
+        System.out.println(campeosMundialFifa);
+        
+        campeosMundialFifa.put("Brasil", 6); //alterando valordo brasil
+        System.out.println(" ");
+        
+        //alterando valor do BRasil
+        System.out.println("Exibindo com valor alterado do Brasil");
+        System.out.println(campeosMundialFifa);
+   
+        //Retonar valor ARgentina
+        System.out.println(" ");
+        System.out.println("Retonar valor da Argentina:");
+        System.out.println(campeosMundialFifa.get("Argentina"));//pegar/retornar valor da argentina
+        
+        System.out.println(" ");
+        System.out.println("Existe ou não elemento França = ");
+        System.out.println(campeosMundialFifa.containsKey("França"));//retorna se existe o elemento França
+        
+        System.out.println(" ");
+        System.out.println("Valor de França: ");
+        System.out.println(campeosMundialFifa.remove("França"));//exibe o valor de frança e removendo elemento França
+        System.out.println("Exibindo sem elemento França: ");
+        System.out.println(campeosMundialFifa);
+        
+        System.out.println(" ");
+        System.out.println("Existe ou não elemento França = ");
+        System.out.println(campeosMundialFifa.containsKey("França"));//retorna se existe o elemento França
+        
+        //retorna se existe algum elemento com valor 6
+        System.out.println(" ");
+        System.out.println("Existe algum Pais com Exa campea?");
+        System.out.println(campeosMundialFifa.containsValue(6));
+        
+        //Retorna tamanho do mapa
+        System.out.println(" ");
+        System.out.println("Tamanho do Mapa");
+        System.out.println(campeosMundialFifa.size());
+        
+        System.out.println(" ");
+        System.out.println(campeosMundialFifa);
+    }
+    
+    
+}
